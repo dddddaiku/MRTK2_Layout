@@ -38,4 +38,5 @@ public class SendPathToSceneObj : MonoBehaviour
             Debug.Log(await obj.GetComponent<AzureGetBlobInfo>().DownloadBlob(gameObject.GetComponent<ButtonConfigHelper>().MainLabelText));
         }
     }
+    
 }

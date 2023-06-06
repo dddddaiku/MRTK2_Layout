@@ -7,8 +7,10 @@ using TMPro;
 
 public class ModelOutputFromAppData : ModelOutput
 {
+    [SerializeField, Header("オブジェクトの最長編サイズを入力")] float ObjMaxSize;
     public void LoadFromAppData(string FileName)
     {
+        MaxSize = ObjMaxSize;
         GetObjName(FileName);
         //表示オブジェクトの初期設定
         var assetLoaderOptions = AssetLoader.CreateDefaultLoaderOptions();

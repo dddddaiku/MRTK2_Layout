@@ -12,7 +12,7 @@ public class ListManager : MonoBehaviour
 
     //使用するボタンの数の合わせる
     [SerializeField] GameObject[] Buttons;
-    [HideInInspector] string[] DisplayNames;
+    [SerializeField] string[] DisplayNames = new string[0];
     [HideInInspector] int Pages;
 
 
@@ -29,7 +29,7 @@ public class ListManager : MonoBehaviour
         }
         NextButton.SetActive(false);
         BackButton.SetActive(false);
-         ListUpdate();
+        ListUpdate();
     }
 
     // Update is called once per frame
@@ -46,10 +46,10 @@ public class ListManager : MonoBehaviour
     {
         for(int i = 0; i < Buttons.Length; i++)
         {
+            
             if(DisplayNames.Length <= Buttons.Length * (Pages-1) + i)
             {
                 Buttons[i].SetActive(false);
-               
             }
             else
             {

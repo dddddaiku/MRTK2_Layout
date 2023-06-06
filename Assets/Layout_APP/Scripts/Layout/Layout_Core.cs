@@ -23,7 +23,7 @@ public class Layout_Core : MonoBehaviour
         {
             Files[i] = Files[i].Replace(Application.persistentDataPath,"");
             Files[i] = Files[i].Remove(0, 1);
-            Debug.Log(Files[i]);
+            
         }
         ViewListUI.GetComponent<ListManager>().SetDisplayname(Files);
     }

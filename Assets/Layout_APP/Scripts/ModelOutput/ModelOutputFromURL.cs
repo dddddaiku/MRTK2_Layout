@@ -8,8 +8,10 @@ using TMPro;
 public class ModelOutputFromURL : ModelOutput
 {
     [SerializeField, Header("ファイル名までの階層のURLを入力")] string URL;
+    [SerializeField, Header("オブジェクトの最長編サイズを入力")] float ObjMaxSize;
     public void LoadandShowFromURL(string FileName)
     {
+        MaxSize = ObjMaxSize;
         GetObjName(FileName);
         //表示オブジェクトの初期設定
         var assetLoaderOptions = AssetLoader.CreateDefaultLoaderOptions();
