@@ -54,7 +54,7 @@ public class ModelOutput : MonoBehaviour
         {
            
             obj.gameObject.AddComponent<MeshCollider>();
-            obj.gameObject.GetComponent<MeshCollider>().convex = true;
+            //obj.gameObject.GetComponent<MeshCollider>().convex = true;
             obj.gameObject.AddComponent<Rigidbody>();
             obj.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             obj.gameObject.GetComponent<Rigidbody>().interpolation = RigidbodyInterpolation.Interpolate;
@@ -83,7 +83,7 @@ public class ModelOutput : MonoBehaviour
                 {
                   
                     ob.gameObject.AddComponent<MeshCollider>();
-                    ob.gameObject.GetComponent<MeshCollider>().convex = true;
+                    //ob.gameObject.GetComponent<MeshCollider>().convex = true;
                 }
                 if (AddMani && !Combine)
                 {
